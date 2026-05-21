@@ -6,7 +6,7 @@ public class Main {
         int N = sc.nextInt();
 
         for(int i = 0; i < N; i++){
-            for(int j = 0; j <= i + i; j++)
+            for(int j = 0; j < 2 * i + 1; j++)
                 System.out.printf("*");
             System.out.println();
         }
