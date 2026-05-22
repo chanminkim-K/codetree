@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+
+        for(int i = 0; i < N * 2; i++){
+            if(i % 2 == 0){
+                for(int j = 0; j < 1 + (i / 2); j++)
+                    System.out.printf("* ");
+            }
+            else
+                for(int j = 0; j < N - (i - 1) / 2; j++)
+                    System.out.printf("* ");
+            System.out.println();
+        }
+    }
+}
