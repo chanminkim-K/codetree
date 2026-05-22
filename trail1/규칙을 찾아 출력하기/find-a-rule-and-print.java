@@ -7,9 +7,7 @@ public class Main {
 
         for(int i = 0; i < N; i++){
             for(int j = 0; j < N; j++){
-                if(i == 0 || i == N - 1)
-                    System.out.printf("* ");
-                else if(j < i  || j == N - 1)
+                if(j < i || i == 0 || j == N - 1)
                     System.out.printf("* ");
                 else
                     System.out.printf("  ");
