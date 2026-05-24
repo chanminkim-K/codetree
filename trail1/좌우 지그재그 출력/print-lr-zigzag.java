@@ -6,13 +6,11 @@ public class Main {
         int N = sc.nextInt();
 
         for(int i = 0; i < N; i++){
-            if(i % 2 == 0){
-                for(int j = N * i + 1; j <= N * (i + 1); j++)
-                    System.out.printf(j + " ");
-            }
-            else{
-                for(int j = N * (i + 1); j > N * i; j--)
-                    System.out.printf(j + " ");
+            for(int j = 0; j < N; j++){
+                int col = (i % 2 == 0) ? j : (N - 1 - j);
+
+                int num = i * N + col + 1;
+                System.out.printf(num + " ");
             }
             System.out.println();
         }
