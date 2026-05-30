@@ -12,12 +12,10 @@ public class Main {
         for(int i = 0; i < n; i++){
             int sum = 0;
             for(int j = 0; j < n; j++){
-                sum += a[j] * Math.abs(i-j);
+                sum += a[j] * Math.abs(i - j);
             }
             
-            if(sum < min){
-                min = sum;
-            }
+            min = Math.min(min, sum);
         }
         System.out.println(min);
     }
