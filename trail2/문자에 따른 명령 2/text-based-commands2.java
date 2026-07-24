@@ -11,8 +11,7 @@ public class Main {
         int cur_x = 0;
         int cur_y = 0;
 
-        for(int i = 0; i < str.length(); i++){
-            char dir = str.charAt(i);
+        for(char dir : str.toCharArray()){
             if(dir == 'L') 
                 cur_dir = (cur_dir - 1 + 4) % 4;
             else if(dir == 'R') 
