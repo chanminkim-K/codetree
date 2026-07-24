@@ -25,13 +25,13 @@ public class Main {
         for(int i = 0; i < n; i++){
             st = new StringTokenizer(br.readLine());
             char x = st.nextToken().charAt(0);
-            int y = Integer.parseInt(st.nextToken());
+            int move = Integer.parseInt(st.nextToken());
 
             int next_dir = dir(x);
-            for(int j = 0; j < y; j++){
-                cur_x += dx[next_dir];
-                cur_y += dy[next_dir];    
-            }
+
+            cur_x += dx[next_dir] * move;
+            cur_y += dy[next_dir] * move;    
+
         }
         System.out.println(cur_x + " " + cur_y);
 
