@@ -2,20 +2,22 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
+    public static final int MAX = 200;
+    public static final int OFFSET = 100;
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        int[][] arr = new int[201][201];
+        int[][] arr = new int[MAX + 1][MAX + 1];
         int answer = 0;
         int overlap = 0;
 
         for(int i = 0; i < n; i++){
             int x1, x2, y1, y2 = 0;
             StringTokenizer st = new StringTokenizer(br.readLine());
-            x1 = Integer.parseInt(st.nextToken()) + 100;
-            y1 = Integer.parseInt(st.nextToken()) + 100;
-            x2 = Integer.parseInt(st.nextToken()) + 100;
-            y2 = Integer.parseInt(st.nextToken()) + 100;
+            x1 = Integer.parseInt(st.nextToken()) + OFFSET;
+            y1 = Integer.parseInt(st.nextToken()) + OFFSET;
+            x2 = Integer.parseInt(st.nextToken()) + OFFSET;
+            y2 = Integer.parseInt(st.nextToken()) + OFFSET;
             for(int j = x1; j < x2; j++){
                 for(int k = y1; k < y2; k++){
                     arr[j][k]++;
@@ -23,8 +25,8 @@ public class Main {
             }
         }
 
-        for(int i = 0; i <= 200; i++){
-            for(int j = 0; j <= 200; j++){
+        for(int i = 0; i <= MAX; i++){
+            for(int j = 0; j <= MAX; j++){
                 if(arr[i][j] >= 1)
                     answer++;
             }
