@@ -11,10 +11,8 @@ public class Main {
         for (int i = 0; i < n; i++){
             arr[i] = sc.nextInt();
 
-            if(i >= 1 && arr[i - 1] > t && arr[i] > t)
+            if(arr[i] > t)
                 cnt++;
-            else if(arr[i] > t)
-                cnt = 1;
             else
                 cnt = 0; 
             
